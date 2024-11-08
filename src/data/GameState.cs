@@ -7,4 +7,10 @@ public class GameState {
         get => saveData.GetOrDefault("money", 200);
         set => saveData.SetValue("money", Math.Max(0, value)); 
     }
+
+    public bool hasPlayedBefore 
+    {
+        get => saveData.GetOrDefault("has-played-before", false);
+        set => saveData.SetValue("has-played-before", value);
+    }
 }
